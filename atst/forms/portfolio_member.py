@@ -9,6 +9,7 @@ from atst.utils.localization import translate
 
 
 class PermissionsForm(BaseForm):
+    # todo: delete extra Hidden Fields
     member_name = StringField()
     member_id = HiddenField()
     perms_app_mgmt = SelectField(
@@ -58,6 +59,7 @@ class PermissionsForm(BaseForm):
 
 
 class MembersPermissionsForm(BaseForm):
+    # TODO: delete this
     members_permissions = FieldList(FormField(PermissionsForm))
 
 

@@ -1,0 +1,15 @@
+{% from "components/alert.html" import Alert %}
+{% from "components/checkbox_input.html" import CheckboxInput %}
+{% from "components/text_input.html" import TextInput %}
+{% from "components/phone_input.html" import PhoneInput %}
+
+{% macro InfoFields(fields) %}
+  <div class="application-member__user-info">
+    {{ TextInput(fields.first_name, validation='requiredField', optional=False) }}
+    {{ TextInput(fields.last_name, validation='requiredField', optional=False) }}
+    {{ TextInput(fields.email, validation='email', optional=False) }}
+    {{ PhoneInput(fields.phone_number, fields.phone_ext)}}
+    {{ TextInput(fields.dod_id, validation='dodId', optional=False) }}
+    <a href="#">How do I find the DoD ID?</a>
+  </div>
+{% endmacro %}

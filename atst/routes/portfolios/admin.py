@@ -71,13 +71,14 @@ def render_admin_page(portfolio, form=None):
     )
     current_member_id = current_member.id if current_member else None
 
+    # TODO: clean up args here
     return render_template(
         "portfolios/admin.html",
         form=form,
         portfolio_form=portfolio_form,
         ppoc=ppoc,
         members=filter_members_data(member_list),
-        member_form=member_forms.NewForm(),
+        new_manager_form=member_forms.NewForm(),
         assign_ppoc_form=assign_ppoc_form,
         portfolio=portfolio,
         audit_events=audit_events,

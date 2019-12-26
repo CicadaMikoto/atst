@@ -2,6 +2,7 @@
 {% from "components/modal.html" import Modal %}
 {% from "components/options_input.html" import OptionsInput %}
 
+<!-- TODO: delete this file -->
 {% for subform in member_perms_form.members_permissions %}
   {% set modal_id = "portfolio_id_{}_user_id_{}".format(portfolio.id, subform.member_id.data) %}
   {% set ppoc = subform.member_id.data == ppoc_id %}
